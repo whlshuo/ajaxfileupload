@@ -24,9 +24,7 @@ jQuery.extend({
 		FR.isTouch = FR.isIOS || FR.isAndroid;
 		
 		/**判断浏览器版本     结束*/
-		/*
-		 * 新代码 开始
-		 */
+		
 		if(!FR.isIE || FR['isIE11'] || FR['isIE10'] || FR['isIE9']){
 			var io = document.createElement('iframe');   
 	        io.id = frameId;   
@@ -39,28 +37,7 @@ jQuery.extend({
             	io.src = uri;   
           	}   
 		}
-		/*
-		 * 新代码 结束
-		 */
-		/*
-		 * 原代码 开始
-		 */
-//		if (window.ActiveXObject) {
-//			var io = document.createElement('<iframe id="' + frameId
-//					+ '" name="' + frameId + '" />');
-//			if (typeof uri == 'boolean') {
-//				io.src = 'javascript:false';
-//			} else if (typeof uri == 'string') {
-//				io.src = uri;
-//			}
-//		} else {
-//			var io = document.createElement('iframe');
-//			io.id = frameId;
-//			io.name = frameId;
-//		}
-		/*
-		 * 原代码 结束
-		 */
+		
 		io.style.position = 'absolute';
 		io.style.top = '-1000px';
 		io.style.left = '-1000px';
